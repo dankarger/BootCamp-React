@@ -1,0 +1,11 @@
+.Box1 {
+    width:700px;
+    height:500px;
+    background:green;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position:relative;
+    z-index:1;
+
+}

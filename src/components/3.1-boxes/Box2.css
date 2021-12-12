@@ -1,0 +1,9 @@
+.Box2{
+    width:600px;
+    height:400px;
+    background:blue;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+}
