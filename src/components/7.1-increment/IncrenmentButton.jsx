@@ -4,14 +4,14 @@ import React from "react";
 class IncrenmentElement extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {num: 0};
+        this.state = {num: null};
     }
     render(){
         return (
             <>
                 <button onClick={ ()=>{
-                    this.setState({num:this.state.num+1});
-                }}> increment</button>
+                    this.setState({num:this.state.num+ this.props.var})
+                }}> incrementOrDicrement </button>
                 <div> Number: {this.state.num} </div>
             </>
 

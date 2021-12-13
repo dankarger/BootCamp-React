@@ -9,8 +9,8 @@ if (module.hot) {
 const App = ()=> {
     return (
      <>
-      <IncrenmentElement />
-
+      <IncrenmentElement var={+1}/>
+         <IncrenmentElement var={-1}/>
          </>
     )
 }
