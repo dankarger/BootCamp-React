@@ -1,13 +1,20 @@
-// import HelloWorld from "./components/2.1-hello_world/HelloWorld.jsx"
-// import Basic_of_jsx from "./components/2.2-basics_of_jsx/Basic_of_jsx";
-// import Box1 from "./components/3.1-boxes/Box1.jsx";
-import Quiz from './components/3.2-quiz/Quiz'
+import React from "react";
 
+import Button from "./components/4.1-buttons/Button";
+import './components/4.1-buttons/Button.css'
+
+if (module.hot) {
+    module.hot.accept();
+}
 
 const App = ()=> {
 
     return (
-      <Quiz />
+        <>
+          <Button className ='bold' text='Important' />
+          <Button text='Not Important' />
+        </>
+
     )
 
 
