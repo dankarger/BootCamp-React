@@ -5,6 +5,7 @@ class IncrenmentElement extends React.Component {
     constructor(props) {
         super(props);
         this.state = {num: null};
+
     }
     render(){
         return (
