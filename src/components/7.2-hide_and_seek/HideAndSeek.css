@@ -1,20 +1,23 @@
+body{
+    padding:4rem;
+}
+
+
 .component-div{
-    width:100px;
+    width:200px;
     height:300px;
+    border:1px solid black;
+    padding:1rem;
 
 }
 
-.box{
-    width:50px;
-    height:80px;
-    background: #f5a419;
-}
 .hide {
     display: none;
 }
 .show {
+    margin-top:10px;
     display:block;
-    width:50px;
-    height:80px;
-    background: #f5a419;
+    width:150px;
+    height:150px;
+    background: #fdee2d;
 }
