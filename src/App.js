@@ -1,5 +1,4 @@
 import React from "react";
-import IncrenmentButton from "./components/7.1-increment/IncrenmentButton";
 import IncrenmentElement from "./components/7.1-increment/IncrenmentButton";
 
 
