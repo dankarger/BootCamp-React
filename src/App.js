@@ -18,12 +18,12 @@ const App = ()=> {
               content = 'random contentdsd'
           />
             <Card
-                img='https://images.pexels.com/photos/3824139/pexels-photo-3824139.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+                img='https://images.pexels.com/photos/7205497/pexels-photo-7205497.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
                 title = 'Random title1'
                 content = 'random bla bla'
             />
             <Card
-                img='https://images.pexels.com/photos/3824139/pexels-photo-3824139.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+                img='https://images.pexels.com/photos/3876792/pexels-photo-3876792.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
                 title = 'Random 33333'
                 content = 'rbbkbkbkbkkbb'
             />
