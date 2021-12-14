@@ -1,6 +1,9 @@
 import React from "react";
 import HideAndSeek from "./components/7.2-hide_and_seek/HideAndSeek";
 // import IncrenmentElement from "./components/7.1-increment/IncrenmentButton";
+// import IncrementAndDecrement from "./components/7.3-increment_and)decrement/IncrementAndDecrement";
+import LifeCycleElement from "./components/8.1-life_cycle_methods/LifeCycle";
+
 
 if (module.hot) {
     module.hot.accept();
@@ -9,10 +12,9 @@ if (module.hot) {
 const App = ()=> {
     return (
      <>
-      {/*<IncrenmentElement var={+1}/>*/}
-      {/*   <IncrenmentElement var={-1}/>*/}
-        <HideAndSeek />
-         </>
+     <LifeCycleElement />
+
+    </>
     )
 }
 
