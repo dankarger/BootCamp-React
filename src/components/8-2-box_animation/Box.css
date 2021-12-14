@@ -1,0 +1,30 @@
+.box {
+    background:red;
+    transform:translateX(-200px);
+    margin:10px;
+
+}
+
+.box-in {
+animation: in 2s forwards ease-in;
+
+}
+
+.box-out {
+    animation: out 2s forwards ease-in;
+
+}
+@keyframes in {
+    to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes out {
+    from{
+        transform: translateX(0)
+    }
+    to{
+        transform: translateX(-200px);
+    }
+}
