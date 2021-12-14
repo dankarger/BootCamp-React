@@ -9,12 +9,16 @@ class LifeCycleElement extends React.Component {
            this.setState(()=>{return{favoriteColor:'red'}})
        },1000)
     }
+    componentDidUpdate() {
+        const newDiv = document.querySelector('#someDiv');
+        newDiv.innerHTML= `<h1> my new favorite color is ${this.state.favoriteColor}</h1>`
+    }
 
     render(){
      return (
          <>
          <h1>`My favourite color is {this.state.favoriteColor} `</h1>
-         <div id="someDiv"> `My new favourite color is {this.state.favoriteColor}`</div>
+         <div id="someDiv"> </div>
          </>
      )
  }
