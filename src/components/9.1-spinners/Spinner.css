@@ -1,0 +1,27 @@
+
+.Spinner {
+    /*opacity: 0;*/
+
+    width:5rem;
+    height:5rem;
+    /*position: absolute;*/
+    /*top:50%;*/
+    /*left:50%;*/
+    border: solid transparent 5px;
+    border-top:solid #4545da 10px;
+    border-radius:50%;
+    transform: rotate(0);
+    animation: loading-animation 1000ms 500ms infinite forwards ease-in-out;
+}
+
+
+
+@keyframes loading-animation {
+    0% {
+        opacity: 0.8;
+        transform: rotate(720deg);
+    }
+    100%{
+        opacity: 0.8;
+    }
+}

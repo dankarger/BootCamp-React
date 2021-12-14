@@ -4,8 +4,9 @@ import HideAndSeek from "./components/7.2-hide_and_seek/HideAndSeek";
 // import IncrementAndDecrement from "./components/7.3-increment_and)decrement/IncrementAndDecrement";
 // import LifeCycleElement from "./components/8.1-life_cycle_methods/LifeCycle";
 // import Box from "./components/8-2-box_animation/Box";
-import Box from "./components/8-2-changing_box/Box_8-2";
-
+// import Box from "./components/8-2-changing_box/Box_8-2";
+import Spinner from "./components/9.1-spinners/Spinner";
+import SpinnerElement from "./components/9.1-spinners/SpinnerElement";
 
 
 if (module.hot) {
@@ -15,10 +16,7 @@ if (module.hot) {
 const App = ()=> {
     return (
      <>
-             {/*<Box width='30px' height='100px'/>*/}
-             {/*<Box width='130px' height='70px'/>*/}
-             {/*<Box width='40px' height='90px'/>*/}
-         <Box />
+             <SpinnerElement />
     </>
     )
 }
