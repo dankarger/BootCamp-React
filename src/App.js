@@ -8,8 +8,8 @@ import HideAndSeek from "./components/7.2-hide_and_seek/HideAndSeek";
 // import Spinner from "./components/9.1-spinners/Spinner";
 // import SpinnerElement from "./components/9.1-spinners/SpinnerElement";
 // import CostumButtonElement from "./components/11-1-child_to_father/CostumButtonElement";
-import CheckBoxsDiv from "./components/11.2-checkbox/CheckBoxsDiv";
-
+// import CheckBoxsDiv from "./components/11.2-checkbox/CheckBoxsDiv";
+import Form from "./components/11.3-form_review/Form";
 
 if (module.hot) {
     module.hot.accept();
@@ -18,7 +18,7 @@ if (module.hot) {
 const App = ()=> {
     return (
      <>
-       <CheckBoxsDiv />
+     <Form />
     </>
     )
 }
