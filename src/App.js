@@ -5,9 +5,9 @@ import HideAndSeek from "./components/7.2-hide_and_seek/HideAndSeek";
 // import LifeCycleElement from "./components/8.1-life_cycle_methods/LifeCycle";
 // import Box from "./components/8-2-box_animation/Box";
 // import Box from "./components/8-2-changing_box/Box_8-2";
-import Spinner from "./components/9.1-spinners/Spinner";
-import SpinnerElement from "./components/9.1-spinners/SpinnerElement";
-
+// import Spinner from "./components/9.1-spinners/Spinner";
+// import SpinnerElement from "./components/9.1-spinners/SpinnerElement";
+import CostumButtonElement from "./components/11-1-child_to_father/CostumButtonElement";
 
 if (module.hot) {
     module.hot.accept();
@@ -16,7 +16,7 @@ if (module.hot) {
 const App = ()=> {
     return (
      <>
-             <SpinnerElement />
+           <CostumButtonElement />
     </>
     )
 }
