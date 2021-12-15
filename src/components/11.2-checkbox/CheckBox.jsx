@@ -11,7 +11,7 @@ class CheckBox extends React.Component {
         const {text,isChecked,id} = this.props
         return (
             <>
-                <input key={id} id={id} type="checkbox"defaultChecked={isChecked} />
+                <input   id={id} type="checkbox" defaultChecked={isChecked} />
                 <label htmlFor={id}> {text}</label>
                 <br/>
                 </>

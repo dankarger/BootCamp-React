@@ -7,9 +7,9 @@ import CheckBox from "./CheckBox";
 const CheckBoxsDiv = ()=> {
 
     const checkInputsList = [
-        {text:'I read the term of the app',isChecked:false, id:0,key:0},
-        {text:'I accept the term of the app',isChecked:false, id:1,key:1},
-        {text:'I want to get the weekly news letter',isChecked:true, id:2,key:2},
+        {text:'I read the term of the app',isChecked:false, id:0,key:10},
+        {text:'I accept the term of the app',isChecked:false, id:1,key:11},
+        {text:'I want to get the weekly news letter',isChecked:true, id:2,key:12},
         {text:'I to get thesales offers',isChecked:true, id:3,key:3},
     ]
 
@@ -17,15 +17,14 @@ const CheckBoxsDiv = ()=> {
 
     return(
         <>
-            { checkInputsList.map(input=>{
+            { checkInputsList.map(inputBtn=>{
                 return (
-                    <>
                          <CheckBox
-                             text={input.text}
-                             key={input.key}
-                             isChecked={input.isChecked}
+                             text={inputBtn.text}
+                             id={inputBtn.id}
+                             key={inputBtn.id}
+                             isChecked={inputBtn.isChecked}
                          />
-                    </>
                 )
             }) }
         </>
