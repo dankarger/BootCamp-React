@@ -1,6 +1,5 @@
 import React from "react";
-import Chuck from "./components/12.1-chuck_norris_api/12-1-Chuck";
-
+import DataMassage from "./components/13-1-data_massaging/DataMassage";
 if (module.hot) {
     module.hot.accept();
 }
@@ -10,7 +9,7 @@ if (module.hot) {
 const App = ()=> {
     return (
      <>
-       <Chuck />
+       <DataMassage />
     </>
     )
 }
