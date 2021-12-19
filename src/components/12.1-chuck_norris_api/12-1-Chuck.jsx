@@ -42,19 +42,6 @@ class Chuck extends React.Component {
     }
 
 
-
-
-    // console.log
-    // componentDidMount() {
-    //     console.log(this.categoriesList)
-    // }
-    // categories = this.categoriesList.map(cat=>{
-    //     console.log(cat)
-    // })
-    // componentDidUpdate(prevProps, prevState, snapshot) {
-    //     console.log(this.categoriesList)
-    // }
-
     render() {
         return (
             <>
