@@ -1,5 +1,6 @@
 import React from "react";
-import DataMassage from "./components/13-1-data_massaging/DataMassage";
+import Avatar from "./components/13-2-avatars/Avatar";
+
 if (module.hot) {
     module.hot.accept();
 }
@@ -9,7 +10,7 @@ if (module.hot) {
 const App = ()=> {
     return (
      <>
-       <DataMassage />
+       <Avatar />
     </>
     )
 }
