@@ -19,7 +19,7 @@ class Avatar extends React.Component {
                 picture:avatarsList[i].data.results[0].picture,
                 phone:avatarsList[i].data.results[0].phone
             }
-            personsList.push(person)
+            personsList.push(person.firstName)
         }
         console.log(avatarsList)
         console.log(personsList)
@@ -31,14 +31,20 @@ class Avatar extends React.Component {
         this.setState((prev)=>{
             return { searchValue:prev+value}
         })
-        this.state.avatars.filter(person=>{
-            return person.data.results[0].name.first ===this.state.searchValue
-        })
+        // this.state.avatars.filter(person=>{
+        //     return person.data.results[0].name.first ===this.state.searchValue
+        // })
+
+        let result = this.filterItems(this.state.personsList, this.state.searchValue)
         console.log(this.state.searchValue)
-        console.log(this.state.searchValue)
+        console.log('sasas',result)
 
     }
-
+    filterItems(arr, query) {
+        return arr.find(function(el) {
+            return el.toLowerCase().indexOf(query.toLowerCase()) !== -1
+        })
+    }
     render() {
         return(
             <div className='page'>
