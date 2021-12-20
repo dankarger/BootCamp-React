@@ -1,6 +1,5 @@
 import React from "react";
-import FocusInput from "./components/14-1-focus/FocusInput";
-
+import CopyTextArea from "./components/14-2-copy/Copy";
 
 if (module.hot) {
     module.hot.accept();
@@ -11,7 +10,7 @@ if (module.hot) {
 const App = ()=> {
     return (
      <>
-       <FocusInput />
+       <CopyTextArea />
     </>
     )
 }
