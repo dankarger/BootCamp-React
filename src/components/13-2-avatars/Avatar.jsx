@@ -4,74 +4,66 @@ import './Avatar.css'
 import InputFilter from "./InputFilter";
 
 class Avatar extends React.Component {
-    state = {avatars:[],personsList:[],searchValue:'',searchResult:[]}
-    API = 'https://randomuser.me/api/'
+    state = {avatars: [], personsList: [], searchValue: '', searchResult: []}
+    API = 'https://randomuser.me/api/?results=10'
 
-    get10Avatars = async ()=>{
-        let avatarsList =[];
-        let personsList = [];
-        for(let i=0;i<10;i++){
-            avatarsList.push(await axios.get(this.API))
-              let  person=  {
-                firstName:avatarsList[i].data.results[0].name.first,
-                LastName:avatarsList[i].data.results[0].name.last,
-                gender:avatarsList[i].data.results[0].gender,
-                picture:avatarsList[i].data.results[0].picture,
-                phone:avatarsList[i].data.results[0].phone
-            }
-            personsList.push(person.firstName)
-        }
-        console.log(avatarsList)
-        console.log(personsList)
-        this.setState({avatars:avatarsList, personsList:personsList})
-        console.log(this.state)
-        console.log(personsList)
+    get10Avatars = async () => {
+        const{data} = await  axios.get(this.API);
+
+        this.setState({avatars: data.results});
     }
-    filterAvatarFunction=(value)=>{
-        this.setState((prev)=>{
-            return { searchValue:prev+value}
-        })
-        // this.state.avatars.filter(person=>{
-        //     return person.data.results[0].name.first ===this.state.searchValue
-        // })
 
-        let result = this.filterItems(this.state.personsList, this.state.searchValue)
-        console.log(this.state.searchValue)
-        console.log('sasas',result)
+    createCardsFromAvatars() {
+        if (this.state.avatars.length > 0) {
+            return (
+                <div className='ui link cards'>
+                    {this.filterAvatarFunction(this.state.avatars, this.state.searchValue).map(avatar => {
+                        return <div key={avatar.login.uuid}/>
+                    })}
+                </div>
+            )
+        }
+    }
 
+
+    filterUsers = (users, searchValue) => {
+        return users.filter((user) => {
+            const fullName = (user.name.first + " " + user.name.last).toLowerCase();
+            return fullName.indexOf(searchValue.toLowerCase()) !== -1;
+        });
+    };
+
+    onChangeHandler = (e)=>{
+        this.setState({searchValue:e.target.value})
     }
     filterItems(arr, query) {
-        return arr.find(function(el) {
+        return arr.find(function (el) {
             return el.toLowerCase().indexOf(query.toLowerCase()) !== -1
         })
     }
-    render() {
-        return(
-            <div className='page'>
-                <button onClick={this.get10Avatars}>Get Avatars </button>
-            <InputFilter callBack={this.filterAvatarFunction} stateValue={this.state.searchValue}/>
-             <button onClick={console.log('g')}>Filter </button>
 
-                <div>
-                    <div  className='row'>   {this.state.avatars.map(avatar=>{
-                            return(
-                                <div>
-                                    <div  className='card' key={avatar.data.results[0].name.first+new Date()}>
-                                        <p>{avatar.data.results[0].name.first} {avatar.data.results[0].name.last}</p>
-                                        <img src={avatar.data.results[0].picture.large} alt=""/>
-                                        <p>{avatar.data.results[0].gender}</p>
-                                    </div>
-                                </div>
-                            )
-                        }
-                    )}
+    componentDidMount() {
+        this.get10Avatars();
+    }
+
+    render() {
+        return (
+            <div className="container">
+                <h1>Search</h1>
+                <div className="ui search">
+                    <input
+                        onChange={(e) => this.onChangeHandler(e)}
+                        value={this.state.searchValue}
+                        className="prompt"
+                        type="text"
+                        placeholder="Search..."
+                    />
                 </div>
 
+                {this.createCardsFromAvatars()}
+            </div>
+                        )
+                    }
+                        }
 
-                          </div>
-                            </div>
-
-                                )
-  }
-}
-export default Avatar
+        export default Avatar

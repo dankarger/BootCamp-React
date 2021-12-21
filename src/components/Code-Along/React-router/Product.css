@@ -1,0 +1,12 @@
+.Product {
+    width:200px;
+    height:100%;
+    border:1px solid black
+}
+
+
+.Product-img {
+    width:150px;
+    height:250px;
+    object-fit: contain;
+}

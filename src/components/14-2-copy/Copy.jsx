@@ -14,8 +14,7 @@ class CopyTextArea extends React.Component {
         this.textRef.current.focus()
     }
     copyTextAreaFunction = async()=> {
-      let text = this.textRef.current.value
-       let theClipboard =  navigator.clipboard;
+      let text = this.textRef.current.value;
         await navigator.clipboard.writeText(text)
     }
 

@@ -1,5 +1,7 @@
 import React from "react";
-import CopyTextArea from "./components/14-2-copy/Copy";
+// import App116 from "./components/Code-Along/App-116/App116";
+// import Avatar from "./components/13-2-avatars/Avatar";
+import RouterApp from "./components/Code-Along/React-router/Router";
 
 if (module.hot) {
     module.hot.accept();
@@ -10,7 +12,7 @@ if (module.hot) {
 const App = ()=> {
     return (
      <>
-       <CopyTextArea />
+    <RouterApp />
     </>
     )
 }

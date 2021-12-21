@@ -1,0 +1,6 @@
+.RouterApp {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding:3rem;
+}
