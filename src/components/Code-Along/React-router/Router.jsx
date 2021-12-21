@@ -61,8 +61,7 @@ class  RouterApp extends React.Component {
                   <Route path='/products' component={ProductsPage} />
                   <Route path='/products' component={ProductsPage} />
                   <Route path={`/product/`} component={ProductDetailComponent} />
-                  <Route name="products2" path="/products/:product" handler={this.CreateProductView} />
-
+                  <Route name="products2" path="/products/:id" handler={this.CreateProductView} />
               </div>
           </BrowserRouter>
             </div>
