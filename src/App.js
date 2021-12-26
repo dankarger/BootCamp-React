@@ -4,8 +4,8 @@ import React from "react";
 // import RouterApp from "./components/Code-Along/React-router/Router";
 // import TodoApp from "./components/TodoApp/TodoApp";
 // import CardTest from "./cardTest/CardTest";
-import Widget from "./components/Code-Along/widget/Widget";
-
+// import Widget from "./components/Code-Along/widget/Widget";
+import Text,{text} from "./components/18-1-text/Text";
 
 if (module.hot) {
     module.hot.accept();
@@ -16,7 +16,7 @@ if (module.hot) {
 const App = ()=> {
     return (
      <>
-    <Widget />
+    <Text text={text} number='30'/>
 
     </>
     )
