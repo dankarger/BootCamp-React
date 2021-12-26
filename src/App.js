@@ -7,7 +7,9 @@ import React from "react";
 // import Widget from "./components/Code-Along/widget/Widget";
 // import Text,{text} from "./components/18-1-text/Text";
 // import SimpleTodo ,{data3} from "./components/18-2-simpleTodo/simpleTodo";
-import WhatsTheTime from "./components/18-3-whats-the-time/WhatsTheTime";
+// import WhatsTheTime from "./components/18-3-whats-the-time/WhatsTheTime";
+import MarkAndDelete from "./components/18-4-marking-And-deleting /MarkAndDelete";
+
 
 if (module.hot) {
     module.hot.accept();
@@ -16,9 +18,11 @@ if (module.hot) {
 
 
 const App = ()=> {
+
+
     return (
      <>
-    <WhatsTheTime />
+    < MarkAndDelete />
 
     </>
     )
