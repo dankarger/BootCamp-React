@@ -6,9 +6,8 @@ import React from "react";
 // import CardTest from "./cardTest/CardTest";
 // import Widget from "./components/Code-Along/widget/Widget";
 // import Text,{text} from "./components/18-1-text/Text";
-
-import SimpleTodo ,{data3} from "./components/18-2-simpleTodo/simpleTodo";
-
+// import SimpleTodo ,{data3} from "./components/18-2-simpleTodo/simpleTodo";
+import WhatsTheTime from "./components/18-3-whats-the-time/WhatsTheTime";
 
 if (module.hot) {
     module.hot.accept();
@@ -19,7 +18,7 @@ if (module.hot) {
 const App = ()=> {
     return (
      <>
-    <SimpleTodo />
+    <WhatsTheTime />
 
     </>
     )
