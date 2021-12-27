@@ -8,9 +8,9 @@ import React from "react";
 // import Text,{text} from "./components/18-1-text/Text";
 // import SimpleTodo ,{data3} from "./components/18-2-simpleTodo/simpleTodo";
 // import WhatsTheTime from "./components/18-3-whats-the-time/WhatsTheTime";
-import MarkAndDelete from "./components/18-4-marking-And-deleting /MarkAndDelete";
-
-
+// import MarkAndDelete from "./components/18-4-marking-And-deleting /MarkAndDelete";
+import Search from "./components/Code-Along/widget/Search";
+import SimpleFetch from "./components/19-1-fetch/Fetch";
 if (module.hot) {
     module.hot.accept();
 }
@@ -22,8 +22,9 @@ const App = ()=> {
 
     return (
      <>
-    < MarkAndDelete />
-
+    {/*< MarkAndDelete />*/}
+    {/*<Search />*/}
+         <SimpleFetch />
     </>
     )
 }
