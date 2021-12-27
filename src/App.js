@@ -13,7 +13,7 @@ import Search from "./components/Code-Along/widget/Search";
 import SimpleFetch from "./components/19-1-fetch/Fetch";
 // import Countries from "./components/19-2-Countries/Countries";
 import Alogolia from "./components/19-3-algolia/Alogolia";
-
+import ChuckHook from "./components/19-4-refactore/ChuckHook";
 if (module.hot) {
 
     module.hot.accept();
@@ -30,7 +30,8 @@ const App = ()=> {
     {/*<Search />*/}
     {/*     <SimpleFetch />*/}
     {/*     <Countries />*/}
-         <Alogolia />
+    {/*     <Alogolia />*/}
+         <ChuckHook />
     </>
     )
 }
