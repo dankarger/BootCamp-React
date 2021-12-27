@@ -45,6 +45,7 @@ const [countriesList,setCountriesList] = useState([])
                 )
             })
     }
+
 const handleOnChange = (e)=> {
   console.log('eeeee',e.target.value)
     setSearchInput(e.target.value)
