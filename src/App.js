@@ -11,7 +11,10 @@ import React from "react";
 // import MarkAndDelete from "./components/18-4-marking-And-deleting /MarkAndDelete";
 import Search from "./components/Code-Along/widget/Search";
 import SimpleFetch from "./components/19-1-fetch/Fetch";
+import Countries from "./components/19-2-Countries/Countries";
+
 if (module.hot) {
+
     module.hot.accept();
 }
 
@@ -24,7 +27,8 @@ const App = ()=> {
      <>
     {/*< MarkAndDelete />*/}
     {/*<Search />*/}
-         <SimpleFetch />
+    {/*     <SimpleFetch />*/}
+         <Countries />
     </>
     )
 }

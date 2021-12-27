@@ -9,7 +9,7 @@ const SimpleFetch = () => {
 
     useEffect(()=> {
         const fetch = async () => {
-           const res =  await axios.get(PROXIE_URL+API)
+           const res =  await axios.get( API)
             setData(res.data)
             console.log(res)
         };
