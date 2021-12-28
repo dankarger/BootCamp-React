@@ -1,6 +1,5 @@
 import React from "react";
-import ChuckHookCancel from "./components/20-1-cancel/ChuckHookCancel";
-
+import Editing from "./components/21-1-editing/Editing";
 if (module.hot) {
 
     module.hot.accept();
@@ -14,7 +13,7 @@ const App = ()=> {
     return (
      <>
 
-         <ChuckHookCancel />
+         <Editing />
     </>
     )
 }

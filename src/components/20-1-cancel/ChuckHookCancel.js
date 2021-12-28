@@ -8,6 +8,15 @@ const API2='https://api.chucknorris.io/jokes/random?querry='
 const CATEGORIES_API='https://api.chucknorris.io/jokes/categories'
 
 const cancelTokenSource = axios.CancelToken.source();
+const controller = new AbortController();
+//
+// axios.get('/foo/bar', {
+//     signal: controller.signal
+// }).then(function(response) {
+//     //...
+// });
+// cancel the request
+// controller.abort()
 
 const ChuckHookCancel =()=> {
     // state={joke:'',categories:[]}
@@ -19,7 +28,7 @@ const ChuckHookCancel =()=> {
         const getRandomJoke=  async ()=>{
             try{
             const responce = await axios.get(API,{
-                cancelToken: cancelTokenSource.token
+                signal: controller.signal
             });
 
             // })
@@ -32,6 +41,7 @@ const ChuckHookCancel =()=> {
 
             }
         }
+      return  getRandomJoke()
 
     },[])
 
@@ -58,7 +68,8 @@ const ChuckHookCancel =()=> {
     }
    const handleToggleButton=()=>{
         setToggle(visible=>!visible)
-       cancelTokenSource.cancel();
+       controller.abort()
+       // cancelTokenSource.cancel();
     }
     function printData(data) {
         console.log('resss',data)
