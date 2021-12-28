@@ -2,26 +2,26 @@ import React,{useState,useEffect,useRef} from "react";
 
 
 const Editing = () => {
-    const [isEdit,setIsEdit] = useState(false)
+    const [isEdit,setIsEdit] = useState(true)
     const inputRef= useRef()
 
     const handleEditButton=()=>{
-        if(isEdit) {
-            console.log('is',inputRef.current)
-            inputRef.current.focus()
-        }
-        // inputRef.current.focus()
-        setIsEdit(edit=>!edit)
 
+
+        setIsEdit(edit=>!edit)
+        if(!isEdit) inputRef.current.focus()
+        // if(isEdit) inputRef.current.focus()
+        // inputRef.current.focus()
         console.log('isnot',inputRef.current)
 
     }
 
+    let visibilityVar = isEdit?'visible':'hidden'
     return(
         <div>
-            {isEdit && <input ref={inputRef} type="text"/>}
+            {!isEdit &&<input style={{visibility:{visibilityVar}}} ref={inputRef} type="text"/>}
 
-            <button onClick={handleEditButton}>{isEdit? 'Save':'Edit'}</button>
+            <button onClick={handleEditButton}>{isEdit? 'Edit':'Save'}</button>
         </div>
 
     )
