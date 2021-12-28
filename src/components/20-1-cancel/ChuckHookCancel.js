@@ -25,15 +25,16 @@ const ChuckHookCancel =()=> {
     const[isVisible,setToggle]=useState(true)
 
     useEffect(()=>{
+        const controller = new AbortController();
         const getRandomJoke=  async ()=>{
             try{
-            const responce = await axios.get(API,{
+            const response = await axios.get(API,{
                 signal: controller.signal
             });
 
             // })
 
-           setJoke(responce.data.value)
+           setJoke(response.data.value)
         }catch(err) {
 
                     console.log('err')
@@ -41,12 +42,14 @@ const ChuckHookCancel =()=> {
 
             }
         }
-      return  getRandomJoke()
+    getRandomJoke()
 
     },[])
 
     useEffect(()=>{
-
+    return (()=>{
+        controller.abort()
+    })
     },[])
 
    const getCategories= async ()=> {
@@ -68,7 +71,7 @@ const ChuckHookCancel =()=> {
     }
    const handleToggleButton=()=>{
         setToggle(visible=>!visible)
-       controller.abort()
+
        // cancelTokenSource.cancel();
     }
     function printData(data) {

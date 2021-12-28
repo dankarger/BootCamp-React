@@ -16,7 +16,7 @@ const VideoPlayer = () => {
         <div>
             <button onClick={playVideo}>Play</button>
             <button onClick={pauseVideo}>Pause</button>
-            <video ref={player} src="/Videos/first_wave_exp.mp4" typeof="mp4"> </video>
+            <video style={{width:'300px',height:"300px"}}ref={player} src="/Videos/first_wave_exp.mp4" typeof="mp4"> </video>
 
         </div>
     )
